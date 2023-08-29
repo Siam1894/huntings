@@ -4,17 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Huntings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <header>
+        <div class="bg-gray-100 lg:h-[700px]">
+                                      <div class="justify-between flex px-20 py-10">
+                               <div>
+                             <h2 class="text-3xl text-black font-extrabold">Hot <span class="text-pink-700">Gadgets</span></h2>
+        
+                              </div>
+                              <div>
+                                <button class="btn btn-outline btn-secondary">Sign Up</button>
+                              </div>
+                           </div>
+       
+        <div class=" text-center">
+            <h1 class="text-6xl text-black font-bold mb-4">Apple Iphone 13 Pro Max</h1>
+        <p class="text-black mb-4">There are many variations of passages of Lorem Ipsum available,<br> but the majority have suffered alteration in some form, by injected humou.</p>
+        <button class="btn btn-active btn-primary mb-6">Bay Now</button>
+        </div>
+        </div>
 
+        <div class="lg:flex lg:mx-auto lg:justify-center lg:-mt-72 hidden">
+            <img class="h-[400px] w-[200px] mt-14" src="img/img1.png" alt="">
+            <img class="h-[500px] w-[500px]"  src="img/img2.png" alt="">
+            <img class="h-[410px] w-[220px] mt-14" src="img/img3.png" alt="">
+        </div>
     </header>
-    <main>
+
+    <main class="mt-12">
+        <section class="p-2 bg-gray-100 mx-20 rounded-xl">
+            <input id="search-feald" type="text" placeholder="Search...." class="input input-bordered input-accent w-full max-w-xs" />
+            <button onclick="handelSearch()" class="btn btn-outline btn-success ml-2">Search</button>
+        </section>
+        <section class="mt-4 px-20">
+            <div id="loding-boll" class="text-center my-20 hidden">
+                <span class="loading loading-ball loading-lg"></span>
+            </div>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+
+
+
+            </div>
+
+            <div onclick="handelShowAll()" id="show-all-container" class="hidden mt-4 text-center">
+                <button class="btn btn-active btn-secondary">Show All</button>
+            </div>
+            <!-- Open the modal using ID.showModal() method -->
+             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+             <form method="dialog" class="modal-box">
+               <h3 id="modul-detailses" class="font-bold text-lg"></h3>
+               <div id="modal-detalis-vars">
+               </div>
+                <div class="modal-action">
+             <!-- if there is a button in form, it will close the modal -->
+               <button class="btn">Close</button>
+                </div>
+            </form>
+               </dialog>
+         
+
+
+        </section>
+
 
     </main>
-    <footer>
 
-    </footer>
+        <footer class="footer p-10 bg-base-200 text-base-content mt-16">
+            <div>
+              <span class="footer-title">Services</span> 
+              <a class="link link-hover">Branding</a> 
+              <a class="link link-hover">Design</a> 
+              <a class="link link-hover">Marketing</a> 
+              <a class="link link-hover">Advertisement</a>
+            </div> 
+            <div>
+              <span class="footer-title">Company</span> 
+              <a class="link link-hover">About us</a> 
+              <a class="link link-hover">Contact</a> 
+              <a class="link link-hover">Jobs</a> 
+              <a class="link link-hover">Press kit</a>
+            </div> 
+            <div>
+              <span class="footer-title">Legal</span> 
+              <a class="link link-hover">Terms of use</a> 
+              <a class="link link-hover">Privacy policy</a> 
+              <a class="link link-hover">Cookie policy</a>
+            </div> 
+            <div>
+              <span class="footer-title">Newsletter</span> 
+              <div class="form-control w-80">
+                <label class="label">
+                  <span class="label-text">Enter your email address</span>
+                </label> 
+                <div class="relative">
+                  <input type="text" placeholder="username@site.com" class="input input-bordered w-full pr-16" /> 
+                  <button class="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </footer>
+
+ 
 
     <script src="phone.js"></script>
 </body>
